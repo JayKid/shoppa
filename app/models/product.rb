@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  attr_accessible :name, :amount, :unit_name
+  attr_accessible :amount, :name, :unit_name
 
   def initialize(name,amount,unit_name)
     @name = name
@@ -8,6 +8,6 @@ class Product < ActiveRecord::Base
   end
 
   def getAmountXUnit
-    @amount.to_s() + " x " + @unit_name
+    amount.to_s() + " x " + unit_name
   end
 end
